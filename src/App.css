@@ -37,6 +37,10 @@
   }
 }
 
+div .tituloListado{
+  text-align: center;
+}
+
 .user-list {
   display: flex;
   flex-wrap: wrap;
@@ -49,8 +53,13 @@
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background-color 0.5s; /* Agregamos transición al color de fondo */
   width: 300px;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0; /* Cambiamos el color de fondo al pasar el mouse */
 }
 
 .user-card img { 
@@ -59,9 +68,9 @@
   border-radius: 50%;
 }
 
-.user-card:hover {
+/* .user-card:hover {
   transform: scale(1.05);
-}
+} */
 
 .modal {
   position: fixed;

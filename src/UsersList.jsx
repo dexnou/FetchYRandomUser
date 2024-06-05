@@ -21,13 +21,13 @@ const UsersList = () => {
 
   return (
     <div>
-      <h1>Listado:</h1>
+      <h1 className="tituloListado">Listado:</h1>
       <div className="user-list">
         {users.map((user, index) => (
           <div key={index} className="user-card" onClick={() => setSelectedUser(user)}>
             <img src={user.picture.thumbnail} alt={`${user.name.first} ${user.name.last}`} />
             <h2>{`${user.name.first} ${user.name.last}`}</h2>
-            <p>{`${user.location.city} ${user.name.country}`} </p>
+            <p>{`${user.location.city}, ${user.location.country}`} </p>
           </div>
         ))}
       </div>
@@ -39,8 +39,8 @@ const UsersList = () => {
             <h2>{`${selectedUser.name.first} ${selectedUser.name.last}`}</h2>
             <img src={selectedUser.picture.large} alt={`${selectedUser.name.first} ${selectedUser.name.last}`} />
             <p><strong>Email:</strong> {selectedUser.email}</p>
-            <p><strong>Phone:</strong> {selectedUser.phone}</p>
-            <p><strong>Location:</strong> {`${selectedUser.location.city}, ${selectedUser.location.country}`}</p>
+            <p><strong>Telefono:</strong> {selectedUser.phone}</p>
+            <p><strong>Dirección:</strong> {`${selectedUser.location.city}, ${selectedUser.location.country}`}</p>
           </div>
         </div>
       )}
